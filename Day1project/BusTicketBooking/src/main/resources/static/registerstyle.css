@@ -1,0 +1,163 @@
+* {
+	box-sizing: border-box;
+
+}
+body{
+    background-color:#DDA0DD;
+  font-family: "Arimo", sans-serif;
+}
+.navimg {
+  margin: 4%;
+  width: 100%;
+  height: 45px;
+
+}
+.navbar{
+background-color:#800080;
+}
+.nav-item a{
+font-weight:600;
+font-size:20px;
+}
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap");
+
+:root {
+  --main-bgcolor: #c84b31;
+  --main-color: #eee;
+}
+
+
+
+
+form {
+  background: linear-gradient(90deg, #2d4263, #191919);
+  max-width: 20rem;
+  width: 100%;
+  padding: 2rem;
+  box-shadow: #082032 0px 8px 24px;
+  border-radius: 0.9rem;
+  color: #ecdbba;
+}
+
+.form-header {
+  text-align: center;
+}
+.form-title {
+  margin-bottom: 0.5rem;
+}
+.form-description {
+  margin-bottom: 2rem;
+}
+
+.form-body {
+  margin-top: 3rem;
+}
+
+.form-group {
+  position: relative;
+  height: 3rem;
+  margin-bottom: 2rem;
+}
+.form-input {
+  width: 90%;
+  padding: 1rem;
+  border: 1.2px solid #bbb;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  outline: none;
+  background: transparent;
+  color: #ecdbba;
+}
+.form-input:hover,
+.form-input:focus {
+  border-color: var(--main-color);
+}
+label {
+  position: absolute;
+  left: 1rem;
+  top: 1.2rem;
+  padding: 0 0.5rem;
+  transition: top 200ms ease-in, font-size 200ms ease-out;
+}
+
+.form-input:focus ~ label,
+.form-input:not(:placeholder-shown).form-input:not(:focus) ~ label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  background-color: #2d4263;
+  border-radius: 10px;
+}
+
+.log-in {
+  text-align: center;
+  margin-top: 1rem;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+a {
+  color: #ecdbba;
+}
+/* Animated Btn  */
+
+.wrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #ecdbba;
+  background: #4fd1c5;
+  background: linear-gradient(90deg, #c84b31 0%, #c84b31 100%);
+  border: none;
+  border-radius: 100px;
+  transition: all 0.5s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 22px;
+}
+
+button::before {
+  content: "";
+  border-radius: 100px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 3px solid #c84b31;
+  box-shadow: 0 0 8px #c84a31ce;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.button:hover,
+.button:focus {
+  color: #ecdbbad0;
+  transform: translateY(-1.5px);
+}
+
+button:hover::before,
+button:focus::before {
+  opacity: 1;
+}
+
+button:hover::after,
+button:focus::after {
+  animation: none;
+  display: none;
+}
+
