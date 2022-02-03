@@ -3,7 +3,7 @@
 
 }
 body{
-background-color:#DDA0DD;
+background-color:#D8BFD8;
 }
 .on-time-guarantee{
 border:3px solid #800080;
@@ -57,7 +57,12 @@ height:400px;
 
 }
 .navbar{
-background-color:#800080;
+background-color:transparent;
+}
+.nav-item a:hover {
+ color:#D8BFD8 !important;
+ border:1px solid white;
+ border-radius:5px;
 }
 
 
@@ -96,9 +101,7 @@ background-color:#800080;
 	margin: 0 auto;
 	max-width: 1200px;
 }
-	.track-my-bus .d-table-cell {
-		height: 260px;
-	}
+
 
 /* Convenience On-The-Go IOS/Android Container */
 .ios-android-container > div::after {

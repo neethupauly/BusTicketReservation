@@ -3,8 +3,10 @@
 
 }
 body{
-    background-color:#DDA0DD;
-  font-family: "Arimo", sans-serif;
+    background-color:#D8BFD8;
+    background-image:url("./images/original.jpg");
+    background-size:100%;
+
 }
 .navimg {
   margin: 4%;
@@ -13,60 +15,54 @@ body{
 
 }
 .navbar{
-background-color:#800080;
+background-color:transparent;
+}
+.nav-item a:hover {
+ color:#D8BFD8 !important;
+ border:1px solid white;
+ border-radius:5px;
 }
 .nav-item a{
 font-weight:600;
 font-size:20px;
 }
-@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap");
-
-:root {
-  --main-bgcolor: #c84b31;
-  --main-color: #eee;
-}
-
-
 
 
 form {
-  background: linear-gradient(90deg, #2d4263, #191919);
-  max-width: 20rem;
+  background: #800080;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffc0cb, #800080);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffc0cb, #800080); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  max-width: 25rem;
   width: 100%;
+  height:550px;
   padding: 2rem;
+  position:absolute;
+  left:35%;
+  top:15%;
+  margin-top:5px;
   box-shadow: #082032 0px 8px 24px;
   border-radius: 0.9rem;
-  color: #ecdbba;
+  color: #800080;
 }
-
-.form-header {
-  text-align: center;
-}
-.form-title {
-  margin-bottom: 0.5rem;
-}
-.form-description {
-  margin-bottom: 2rem;
-}
-
-.form-body {
-  margin-top: 3rem;
-}
-
 .form-group {
   position: relative;
   height: 3rem;
   margin-bottom: 2rem;
 }
+
+
+
 .form-input {
   width: 90%;
   padding: 1rem;
-  border: 1.2px solid #bbb;
-  border-radius: 0.5rem;
+  border: 1.2px solid #800080;
+  border-radius: 1rem;
   font-size: 1.2rem;
-  outline: none;
+  outline: purple;
   background: transparent;
-  color: #ecdbba;
+  color: #800080;
+  background-color:transparent;
 }
 .form-input:hover,
 .form-input:focus {
@@ -74,6 +70,8 @@ form {
 }
 label {
   position: absolute;
+  color:white;
+  background-color:#800080;
   left: 1rem;
   top: 1.2rem;
   padding: 0 0.5rem;
@@ -92,12 +90,18 @@ label {
   text-align: center;
   margin-top: 1rem;
   outline: none;
-  font-size: 0.9rem;
+}
+.prevacc{
+   color: #800080;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+}
+.prevacc:hover{
+color:#D8BFD8;
 }
 
-a {
-  color: #ecdbba;
-}
+
 /* Animated Btn  */
 
 .wrap {
@@ -116,8 +120,7 @@ a {
   letter-spacing: 1.3px;
   font-weight: 700;
   color: #ecdbba;
-  background: #4fd1c5;
-  background: linear-gradient(90deg, #c84b31 0%, #c84b31 100%);
+  background: #800080;
   border: none;
   border-radius: 100px;
   transition: all 0.5s ease-in-out 0s;
@@ -134,8 +137,8 @@ button::before {
   border-radius: 100px;
   min-width: calc(300px + 12px);
   min-height: calc(60px + 12px);
-  border: 3px solid #c84b31;
-  box-shadow: 0 0 8px #c84a31ce;
+  border: 3px solid #800080;
+  box-shadow: 0 0 8px #800080;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -160,4 +163,3 @@ button:focus::after {
   animation: none;
   display: none;
 }
-
