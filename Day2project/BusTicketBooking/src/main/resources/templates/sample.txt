@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:wght@400;500;600;700&display=swap");
+
+:root {
+  --main-bgcolor: #c84b31;
+  --main-color: #eee;
+}
+
+.form-header {
+  text-align: center;
+}
+.form-title {
+  margin-bottom: 0.5rem;
+}
+.form-description {
+  margin-bottom: 2rem;
+}
+
+.form-body {
+  margin-top: 3rem;
+}
+
+
+
+

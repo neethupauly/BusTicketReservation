@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="addbusstyle.css">
+    <title>Add Bus</title>
+</head>
+</body>
+<nav class="navbar navbar-expand-sm  navbar-dark fixed-top">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="./images/myjourney.png" class="navimg" alt="journey"></a>
+
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse justify-content-end pr-2 pl-3" id="menu-nav">
+            <!-- right aligned nav -->
+            <div>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/login">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+</nav>
+
+</body>
+<form action="">
+    <div align="center">
+        <h6 class="mt-3" ><span th:text="${error}"/></h6> <h6><span th:text="${message}"/></h6>
+    </div>
+    <div class="container mt-2" id="formcontainer" align="center">
+
+        <fieldset>
+            <div class="col"><h2 class="head1">Get Started</h2></div>
+            <input type="text" name="userName" placeholder="Provide a UserName"  required><br>
+            <input type="text" name="name" placeholder="Enter Your Name"  required><br>
+            <input type="text" name="age" placeholder="Enter your age" required><br>
+            <input type="password" name="password" placeholder="Provide a password" required><br>
+            <input type="text" name="address" placeholder="Enter your Address" required><br>
+            <input type="number" name="phoneNumber" placeholder="Enter Phone Number"  required><br>
+            <input type="submit"   value="Sign up" class="button1">
+        </fieldset>
+    </div>
+</form>
+</html>

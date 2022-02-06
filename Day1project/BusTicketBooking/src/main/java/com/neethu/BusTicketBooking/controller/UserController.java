@@ -1,6 +1,7 @@
 package com.neethu.BusTicketBooking.controller;
 
 import com.neethu.BusTicketBooking.entity.User;
+import com.neethu.BusTicketBooking.service.AdminService;
 import com.neethu.BusTicketBooking.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,6 +18,8 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @Autowired
+    private AdminService adminService;
 
     @RequestMapping("/home")
     public String homepage() {
@@ -52,18 +55,27 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public String userSignIn(Model model, HttpServletRequest request) {
+    public String userOrAdminSignIn(Model model, HttpServletRequest request) {
         String userName = request.getParameter("userName");
         String password = request.getParameter("password");
-//        String name=request.getParameter("name");
+
 
         User user2 = userService.findById(userName);
 
-        if (userService.usernameExistsById(userName)) {
-            if (Objects.equals(userService.findById(userName).getPassword(),password)) {
+
+        if (adminService.adminExistsById(userName)) {
+            if (Objects.equals(adminService.findByAdminId(userName).getPassword(), password)) {
+                System.out.println("Admin logged in successfully");
+                return "busAdd";
+            } else {
+                System.out.println("Error occurred during Login");
+                return "login";
+            }
+        } else if (userService.usernameExistsById(userName)) {
+            if (Objects.equals(userService.findById(userName).getPassword(), password)) {
                 model.addAttribute("message", "Successfully logged in");
-                model.addAttribute("userName",userName);
-                model.addAttribute("name",userService.findById(userName).getName());
+                model.addAttribute("userName", userName);
+                model.addAttribute("name", userService.findById(userName).getName());
                 return "login";
             } else {
                 model.addAttribute("error", "Invalid Password..!");
@@ -73,9 +85,7 @@ public class UserController {
             model.addAttribute("error2", "Invalid Credentials..!");
             return "login";
         }
+
     }
-
-
-
-
 }
+
