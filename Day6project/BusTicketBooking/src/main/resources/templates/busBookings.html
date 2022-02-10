@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Bus Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="busLists.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm  navbar-dark fixed-top">
+    <div class="container">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#"><img src="./images/myjourney.png" class="navimg" alt="journey"
+                                              width="60px"></a>
+
+        <!-- Toggle Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse justify-content-end pr-2 pl-3" id="menu-nav">
+            <!-- right aligned nav -->
+            <div>
+                <ul class="navbar-nav">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+
+                        <a class="nav-link text-white" th:href="@{/{userName}/busList (userName=${userName})}">Buses</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+</nav>
+<div class="container  mt-5" align="center">
+    <table class="table table-striped table-bordered">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">Bus Registration Number</th>
+            <th scope="col">Bus Name</th>
+            <th scope="col">Starting Place</th>
+            <th scope="col">Destination Place</th>
+            <th scope="col">Bus Time</th>
+            <th scope="col">Ticket number</th>
+            <th scope="col">Amount</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="ticket : ${seats}">
+            <td th:text="${ticket.busSchedule.bus.registrationNumber}"></td>
+            <td th:text="${ticket.busSchedule.bus.busName}"></td>
+            <td th:text="${ticket.busSchedule.bus.startingPlace}"></td>
+            <td th:text="${ticket.busSchedule.bus.destinationPlace}"></td>
+            <td th:text="${ticket.busSchedule.startingTime}"></td>
+            <td th:text="${ticket.bookedTickets}"></td>
+            <td th:text="${ticket.price}"></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
