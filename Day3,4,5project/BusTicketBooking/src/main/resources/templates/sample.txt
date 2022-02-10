@@ -1,0 +1,60 @@
+<div class="container mt-2"  align="center">
+        <div class="form-header">
+            <h1 class="form-title">Add Bus Schedule</h1>
+        </div>
+        <h6 class="mt-3" ><span th:text="${error}"/></h6> <h6><span th:text="${message}"/></h6>
+
+        <div class="form-body">
+            <div class="form-group">
+                <input
+                        type="text"
+                        id="regno"
+                        class="form-input"
+                        name="registrationNumber"
+                        placeholder=" "
+                        autocomplete="off"
+                />
+                <label for="regno">Registration Number</label>
+            </div>
+
+
+            <div class="form-group">
+                <input
+                        type="date"
+                        id="fromdate"
+                        name="fromDate"
+                        class="form-input"
+                        placeholder=" "
+                />
+                <label for="fromDate">From Date</label>
+            </div>
+            <div class="form-group">
+                <input
+                        type="time"
+                        id="startingTime"
+                        name="startingTime"
+                        class="form-input"
+                        placeholder=" "
+                />
+                <label for="startingTime">Starting Time</label>
+            </div>
+            <div class="wrap">
+                <button class="form-btn button">Add Schedule</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 class="mt-4"><span th:text="${message1}"/></h1>
+</body>
+</html>
