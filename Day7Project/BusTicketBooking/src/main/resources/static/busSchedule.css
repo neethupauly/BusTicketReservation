@@ -1,0 +1,120 @@
+* {
+	box-sizing: border-box;
+
+}
+body{
+    background-color:#D8BFD8;
+    background: url("https://dl.dropboxusercontent.com/s/eht0zcv3ya92rtx/background.jpg?dl=0") no-repeat;
+    background-size:100%;
+    color: #01467c;
+
+}
+.navimg {
+  margin: 4%;
+  width: 100%;
+  height: 45px;
+
+}
+.navbar{
+background-color:transparent;
+}
+.nav-item a:hover {
+ color:#D8BFD8 !important;
+ border:1px solid white;
+ border-radius:5px;
+}
+.nav-item a{
+font-weight:600;
+font-size:20px;
+}
+
+/*second css*/
+
+
+#registration-form{
+	max-width: 800px;
+	margin: 120px auto;
+}
+
+#registration-form .image{
+	float:left;
+    background-image:url("./images/bg.jpg");
+    height: 500px;
+	width: 50%;
+	background-size: cover;
+	background-position: 25%;
+}
+
+#registration-form .frm{
+	float:right;
+  direction: rtl;
+  text-align: right;
+	height: 500px;
+  width: 50%;
+  min-width: 250px;
+  padding: 0 35px;
+  background-size: 100% 100%;
+  background-color: white;
+}
+
+#registration-form h3{
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+#registration-form .form-control{
+	width: 90%;
+	padding: 12px 20px;
+	height: auto;
+}
+
+#registration-form .btn{
+
+    color: #fff;
+    background-color: #005395;
+    border-color: #351323;
+
+}
+#registration-form .btn:hover{
+
+
+    background-color: #005395;
+
+
+}
+
+@media screen and (max-width: 700px){
+	#registration-form .image{
+		width: 30%;
+	    background-position: 60%;
+	}
+
+	#registration-form .frm{
+		width: 70%;
+	}
+
+	#registration-form .form-control{
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 500px){
+	#registration-form .image{
+		display: none;
+	}
+
+	#registration-form .frm{
+		width: 100%;
+	}
+
+	#registration-form h3{
+		text-align: center;
+	}
+
+	#registration-form .btn{
+		width: 100%;
+		margin-top: 20px;
+		text-align: right;
+		float:right !important;
+	}
+}

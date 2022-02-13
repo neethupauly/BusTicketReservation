@@ -1,0 +1,39 @@
+
+.page_404{ padding:40px 0; background:#fff; font-family: 'Arvo', serif;
+}
+
+.page_404  img{ width:100%;}
+
+.four_zero_four_bg{
+
+ background-image: url(https://media0.giphy.com/media/8L0Pky6C83SzkzU55a/giphy.gif?cid=ecf05e47m7akb9h12h87y5cori05hzopryfh4o82tdikgyf5&rid=giphy.gif&ct=g);
+    height: 500px;
+    position: relative;
+        left: 35%;
+  background-repeat:no-repeat;
+ }
+h3.h2 {
+    position: absolute;
+    left: 47%;
+}
+
+ .four_zero_four_bg h1{
+ font-size:80px;
+ }
+
+  .four_zero_four_bg h3{
+			 font-size:80px;
+			 }
+
+			 .link_404{
+	color: #fff!important;
+    padding: 10px 20px;
+    background: #bb6330;
+        position: absolute;
+        left: 55%;
+        top:95%;
+    margin: 20px 0;
+    display: inline-block;}
+	.contant_box_404{ margin-top:-50px;
+
+}

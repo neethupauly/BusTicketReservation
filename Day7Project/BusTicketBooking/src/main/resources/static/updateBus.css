@@ -1,0 +1,183 @@
+.navimg {
+  margin: 4%;
+  width: 100%;
+  height: 45px;
+
+}
+.navbar{
+background-color:transparent;
+}
+.nav-item a:hover {
+ color:#D8BFD8 !important;
+ border:1px solid white;
+ border-radius:5px;
+}
+.nav-item a{
+font-weight:600;
+font-size:20px;
+}
+
+::selection {
+  background: #ffffff16;
+  color: snow;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #fffafa;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  user-select: none;
+  font-weight: 100;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.12s ease-in-out;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #0d2a37;
+
+  &::after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    filter: blur(16px) opacity(0.64) brightness(1.32);
+    margin: 0;
+    background-color: #0d2a37;
+  }
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-flow: column;
+  background: #ffffff16;
+  box-shadow: 0 8px 32px 0 #ffffff16;
+  backdrop-filter: blur(8px);
+  border-radius: 6px;
+  border: 1px solid #ffffff04;
+  padding: 0;
+  width: 290px;
+
+  * {
+    transition: all 0.24s ease-in-out;
+  }
+  > .title {
+    letter-spacing: 8px;
+    font-size: 24px;
+    padding: 32px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  > .actions {
+    padding: 32px 0;
+  }
+  .buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    > * {
+      margin: 0 !important;
+    }
+  }
+}
+input {
+  line-height: 56px;
+  padding: 0 24px;
+  background: #00000012;
+  letter-spacing: 1px;
+  &:hover {
+    background: #00000016;
+  }
+  &:focus {
+    background: #00000024;
+  }
+}
+button {
+  cursor: pointer;
+  background: #00000012;
+  line-height: 44px;
+  padding: 0 24px;
+  border-radius: 4px;
+  border: 1px solid #ffffff12;
+  margin: 32px auto;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  width: fit-content;
+  &:hover {
+    border: 1px solid #ffffff16;
+    background: #ededed0f;
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+  &.flat {
+    background: #ededed0f;
+    border: 0;
+    line-height: 46px;
+    padding: 0 25px;
+    &:hover {
+      border: 0;
+      background: #ededed24;
+    }
+  }
+}
+
+
+.shine {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    background-color: #ededed0f;
+    background: linear-gradient(
+        100deg,
+        #ffffff00 40%,
+        #ededed0f 50%,
+        #ffffff00 60%
+      )
+      #ededed0f;
+    background-size: 200% 100%;
+    background-position-x: 180%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    opacity: 0;
+  }
+
+}
+.shine:hover{
+    animation: 1.2s Shine ease-in-out infinite;
+    opacity: 1;
+    background-color: #115e81;
+
+}
+
+@keyframes Shine {
+  to {
+    background-position-x: -20%;
+  }
+}
+span.title {
+    font-size: 22px;
+    font-weight: 700;
+}
